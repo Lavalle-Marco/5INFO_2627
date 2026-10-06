@@ -1,6 +1,6 @@
 <!-- web component business logic -->
 <script>
-  let name = 'John Doe';
+  let name = 'Antonio Mancuso';
 </script>
 
 <!-- Contenuto del componente in HTML -->
@@ -9,7 +9,7 @@
 <!-- Stile del componente in CSS -->
 <style>
   h1 {
-    width: 30%;
+    width: 50%;
     border: 20px solid green;
     border-radius: 20px;
     color: red;
