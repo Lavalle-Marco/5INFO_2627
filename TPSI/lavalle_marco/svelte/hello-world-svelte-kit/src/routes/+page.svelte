@@ -1,5 +1,6 @@
 <script>
 	import Counter from './Counter.svelte';
+	import Banner from '../lib/components/banner.svelte';
 </script>
 
 <svelte:head>
@@ -20,7 +21,7 @@
 		prova a editare il file <strong>src/routes/+page.svelte</strong>
 	</h2>
 
-	<Counter />
+	<Banner />
 </section>
 
 <style>
