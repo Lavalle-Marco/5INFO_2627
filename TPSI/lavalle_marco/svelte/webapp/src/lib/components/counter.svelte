@@ -5,6 +5,14 @@
 
 <script>
     export let counter = 0;
+
+    function counter_incr() {
+      counter += 1;
+    }
+
+    function counter_decr() {
+      counter -= 1;
+    }
 </script>
 
 
@@ -12,7 +20,7 @@
 
 <div class="container">
     <div class="pulsante">
-      <button>
+      <button onclick={counter_decr}>
         <span class="material-symbols-outlined icon">remove</span>
       </button>
     </div>
@@ -20,7 +28,7 @@
       {counter}
     </div>
     <div class="pulsante">
-      <button>
+      <button onclick={counter_incr}>
         <span class="material-symbols-outlined icon">add</span>
       </button>
     </div>
