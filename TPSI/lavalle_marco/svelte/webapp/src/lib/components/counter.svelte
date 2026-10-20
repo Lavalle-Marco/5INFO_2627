@@ -1,8 +1,6 @@
 <svelte:head>
-  <link href="https://fonts.googleapis.com/css2?
-family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet" />
-  <link href="https://googleapis.com"
-rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Spice&display=swap" rel="stylesheet">
 </svelte:head>
 
 <script>
@@ -30,7 +28,7 @@ rel="stylesheet">
 
   
 
-
+<style>
 .container {
     border: 4px solid #D43C2F;
     display: flex;
@@ -69,3 +67,4 @@ button {
     font-size: 4rem;
     font-family: 'Bungee Spice', cursive;
 }
+</style>

@@ -8,7 +8,7 @@
             <ul>
                 <li><a href="./chi sono">Chi sono</a></li>
 				<li><a href="./input">input</a></li>
-                <li><a href="#">Counter</a></li>
+                <li><a href="./counter">Counter</a></li>
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
