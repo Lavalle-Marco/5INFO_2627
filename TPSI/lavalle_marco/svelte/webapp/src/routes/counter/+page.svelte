@@ -3,6 +3,8 @@
     import DoubleCounter from "../../lib/components/DoubleCounter.svelte";
     let contatore = 0;
     let doppio_contatore = 0;
+    let numeri = [1, 7, 2, 6, 9, 10];
+    let sottolineato = true;
 </script>
 
 
@@ -12,14 +14,13 @@
 {#if contatore < 5}
     <h2 class="rosso">Il valore del contatore vale: {contatore}</h2>
 {:else}
-    <h2 class="verde">Il valore del contatore vale: {contatore}</h2>
+    <h2 class:sottolineato>Il valore del contatore vale: {contatore}</h2>
 {/if}
 
 
 
 <Counter bind:counter={contatore} />
-
-
+    
 
 
 {#if doppio_contatore < 5}
@@ -30,6 +31,11 @@
 <DoubleCounter bind:counter={doppio_contatore} />
 
 
+<ul>
+    {#each numeri as numero, indice}
+        <li>numeri[{indice}]:{numero}</li>
+    {/each}
+</ul>
 
 
 <style>
@@ -37,6 +43,16 @@
     .verde { color: green;}
     .viola { color: purple;}
     .arancione { color:darkorange}
+    .sottolineato { text-decoration: underline;}
 </style>
+
+
+
+
+
+
+
+
+
 
 
