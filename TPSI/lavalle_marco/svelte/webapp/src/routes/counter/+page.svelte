@@ -2,9 +2,14 @@
     import Counter from "../../lib/components/counter.svelte";
     import DoubleCounter from "../../lib/components/DoubleCounter.svelte";
     let contatore = 0;
-    let doppio_contatore = 0;
+    let doppio;
     let numeri = [1, 7, 2, 6, 9, 10];
-    let sottolineato = true;
+    let sottolineato;
+
+    $:{
+        doppio= contatore * 2
+        sottolineato = contatore != 7 
+    }
 </script>
 
 
@@ -20,15 +25,15 @@
 
 
 <Counter bind:counter={contatore} />
-    
 
 
-{#if doppio_contatore < 5}
-    <h2 class="viola">Il valore del contatore vale: {doppio_contatore}</h2>
+
+{#if doppio < 5}
+    <h2 class="viola">Il valore del contatore vale: {doppio}</h2>
 {:else}
-    <h2 class="arancione">Il valore del contatore vale: {doppio_contatore}</h2>
+    <h2 class="arancione">Il valore del contatore vale: {doppio}</h2>
 {/if}
-<DoubleCounter bind:counter={doppio_contatore} />
+<DoubleCounter bind:counter={doppio} />
 
 
 <ul>
