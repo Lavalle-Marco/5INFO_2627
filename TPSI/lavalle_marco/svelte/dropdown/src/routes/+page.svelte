@@ -1,54 +1,19 @@
 <script>
-	import Counter from './Counter.svelte';
+	import Dropdown from "../lib/images/components/dropdown.svelte";
+
+  let selezioni = [];
+
+  function aggiungi(e) {
+    selezioni = [...selezioni, e.detail];
+  }
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
+<h1>DROP DOWN TESTER</h1>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<enhanced:img class="welcome-image" src="#lib/images/svelte-welcome.png" alt="Welcome" />
-		</span>
+<Dropdown titolo="Regione" voci={["Lombardia", "Piemonte", "Lazio"]} on:scelta={aggiungi} />
+<Dropdown titolo="Città" voci={["Torino", "Milano", "Roma", "Genova"]} on:scelta={aggiungi} />
+<Dropdown titolo="Nazione" voci={["Italia", "Germania", "Francia"]} on:scelta={aggiungi} />
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome-image {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+{#each selezioni as s}
+  <h2>Hai selezionato la {s.tipo}: {s.voce}</h2>
+{/each}
